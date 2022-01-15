@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  background-color: #d33b36;
+}
+.imageBackground {
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.row2,
+.row1 {
+  padding: 10px;
+  height: 60%;
+  width: 85%;
+  z-index: 10;
+}
+
+.row1 {
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.infoBox,
+.factsBox,
+.weatherBox {
+  width: 65%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 1px 5px 0px black;
+  backdrop-filter: blur(7px);
+  background-color: rgb(190, 18, 60, 0.2);
+}
+
+.factsBox {
+  width: 45%;
+  background-color: rgb(0, 0, 0, 0.5);
+  box-shadow: none;
+}
+
+.weatherBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weatherCard {
+  padding: 7px;
+  height: 100%;
+  width: 300px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 2px 0px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.icon {
+  width: 120px;
+}
+
+.readingsBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+}
+.reading,
+.mainReading {
+  font-family: "Inter";
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.reading {
+  font-family: "Roboto Mono";
+  font-size: 17px;
+}
+
+.mainReading {
+  font-size: 35px;
+}
+.sunReading {
+  font-size: 35px;
+}
+
+.title {
+  font-family: "Baloo 2";
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+/* .value {
+  font-family: "Inter";
+  font-size: 30px;
+}
+.mainValue {
+  font-size: 50px;
+  font-family: "Inter";
+} */
+
+.atmosphericBox {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  /* opacity: 0; */
+  backdrop-filter: none;
+  background-color: transparent;
+  box-shadow: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.smallBox {
+  width: 99%;
+}
+
+.solInput {
+  width: 80%;
+  height: 30px;
+  border-radius: 20px;
+  outline: none;
+  border: solid 1px black;
+  background-color: transparent;
+  padding-left: 10px;
+  font-family: "Baloo 2";
+  font-size: 25px;
+}
+
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.solInputButton {
+  height: 30px;
+  width: 80px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 300ms ease-out;
+  margin-top: 10px;
+  font-family: "Baloo 2";
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.solInputButton:hover {
+  background-color: rgb(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 5px 5px rgb(255, 255, 255, 0.4);
+}
+
+.solInputButton:active {
+  transition: 100ms ease-in-out;
+  background-color: rgb(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 5px 5px rgb(0, 0, 0, 0.4);
+  color: white;
+}
+
+.titleSmall {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "inter";
+}
+
+.solLabel {
+  font-size: 50px;
+  font-family: "inter";
+}
+
+.infoBox {
+  font-family: "Baloo 2";
+  font-size: 17px;
+  padding: 5px;
+  overflow: hidden;
+}
+.factsBox {
+  padding: 5px;
+  padding-left: 10px;
+  color: white;
+  font-family: "Roboto Mono";
+  font-size: 16px;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  border-radius: 50px;
+  width: 10px;
+}
+::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+.factsBox ul {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: 200ms;
+  padding-left: 20px;
+  list-style-type: circle;
+}
+
+.factsBox li {
+  margin-bottom: 5px;
+}
+
+.factsBox > h2 {
+  font-family: "Baloo 2";
+}
+
+.comet {
+  right: -100px;
+  top: -100px;
+  position: fixed;
+  z-index: 5;
+  width: 60px;
+  animation: cometAnim 750ms forwards linear;
+}
+
+@keyframes cometAnim {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-1000px, 1000px);
+  }
+}
+
+.cometRight {
+  left: -100px;
+  top: -100px;
+  position: fixed;
+  z-index: 5;
+  width: 60px;
+  animation: cometRightAnim 750ms forwards linear;
+}
+
+@keyframes cometRightAnim {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(1000px, 1000px);
+  }
+}
+
+.rocketAtStart {
+  position: fixed;
+  width: 60px;
+  left: 57px;
+  bottom: 100px;
+  transition: 500ms ease-in none;
+  transition-property: left, right, top, bottom;
+}
+
+@media (max-width: 1200px) {
+  .rocketAtStart {
+    display: none;
+  }
+  .imageBackground {
+    height: fit-content;
+  }
+  .row1 {
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+  }
+  .weatherBox {
+    flex-direction: column;
+  }
+
+  .row2 {
+    height: fit-content;
+    width: 100%;
+  }
+  .infoBox {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .factsBox {
+    width: 100%;
+  }
+  .weatherCard {
+    margin-top: 10px;
+    width: 100%;
+  }
+}

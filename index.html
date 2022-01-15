@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Inter:wght@200&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>Wathur</title>
+  </head>
+  <body>
+    <div class="imageBackground">
+      <div class="row1">
+        <div class="infoBox">
+          <h1 style="margin: 0">Weather from Mars</h1>
+          <p style="margin: 0; margin-bottom: 5px">
+            The measurements are being taken by Nasa's Curiosity rover at Gale
+            Crater in the southern Hemisphere of Mars. All the informations come
+            from an API, and latest data is at least 2 days back from current
+            day.
+          </p>
+          <h3 style="margin: 0">To know:</h3>
+          <ul style="padding: 0; margin: 0; list-style: none">
+            <li>
+              You can search for a particular Sol (Sol is a solar day on Mars).
+            </li>
+            <li>
+              The maximum sol date will always be shown when website is first
+              loaded.
+            </li>
+            <li>You can reset the measurements to maximum sol.</li>
+          </ul>
+        </div>
+        <div class="factsBox">
+          <h2 style="margin: 0">Facts about Mars</h2>
+          <ul class="factsList"></ul>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="weatherBox">
+          <div class="sunBox weatherCard">
+            <p class="title">Sun</p>
+            <img class="icon" src="/assets/images/icons/sun.png" />
+            <div class="readingsBox">
+              <div class="mainReading sunReading">Sunrise:</div>
+              <div class="mainReading sunReading">Sunset:</div>
+            </div>
+          </div>
+          <div class="temperatureBox weatherCard">
+            <p class="title">Temperature</p>
+            <img class="icon" src="/assets/images/icons/hot.png" />
+            <div class="readingsBox">
+              <div class="mainReading">High:</div>
+              <div class="mainReading">Low:</div>
+            </div>
+          </div>
+          <div class="pressureBox weatherCard">
+            <p class="title">Atmospheric Pressure</p>
+            <img class="icon" src="/assets/images/icons/atmospheric.png" />
+            <div class="readingsBox">
+              <div class="mainReading"></div>
+            </div>
+          </div>
+          <div class="weatherCard atmosphericBox">
+            <div class="weatherCard smallBox">
+              <p class="titleSmall"></p>
+              <div class="titleSmall earthEqui">Earth:</div>
+              <p class="title solLabel"></p>
+            </div>
+            <div class="weatherCard smallBox">
+              <p class="title">Select Sol</p>
+              <div class="readingsBox" style="align-items: center">
+                <input type="number" class="solInput" min="0" />
+                <button class="solInputButton">GO</button>
+                <button class="solInputButton resetButton">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/images/moving/rocketMobile.png"
+        class="rocketAtStart"
+      />
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/styles.js"></script>
+  </body>
+</html>
